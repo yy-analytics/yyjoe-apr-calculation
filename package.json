@@ -11,9 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@urql/core": "^2.4.4",
-    "ethers": "^5.7.0",
-    "graphql": "^16.5.0",
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/bignumber": "^5.7.0",
     "node-fetch": "^3.2.10"
   }
 }
