@@ -89,7 +89,7 @@ const getYyJoeAPR = async () => {
     //
     // We also need to current ratio of yyJoe to Joe, from the Trader Joe pool, in order to calculate the relative worth of yyJoe to Joe (for the APR).
     //
-    console.log("Getting info for the pairs in each boosted farm...");
+    console.log("Getting reserve info for JOE-yyJOE...");
     const reserves = await callContractFunction(LP_TOKEN_ABI, JOE_YYJOE_PAIR_ADDRESS, 'getReserves', [], latestBlock);
     const { _reserve0, _reserve1 } = reserves;
     const reserve0 = convertWithDecimals(BigNumber.from(_reserve0).toString(), 18);
