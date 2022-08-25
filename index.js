@@ -66,8 +66,8 @@ const getYyJoeAPR = async () => {
             return (
                 {
                     poolID,
-                    regularJoeEarnedPerYear: joePerYear * allocPoint * (1 - veJoeShareBp / 10000) * amount / (totalAllocPoint * totalLpSupply),
-                    boostedJoeEarnedPerYear: joePerYear * allocPoint * (veJoeShareBp / 10000) * factor / (totalAllocPoint * totalFactor),
+                    regularJoeEarnedPerYear: allocPoint === 0 ? 0 : joePerYear * allocPoint * (1 - veJoeShareBp / 10000) * amount / (totalAllocPoint * totalLpSupply),
+                    boostedJoeEarnedPerYear: allocPoint === 0 ? 0 : joePerYear * allocPoint * (veJoeShareBp / 10000) * factor / (totalAllocPoint * totalFactor),
                 }
             )
         }
