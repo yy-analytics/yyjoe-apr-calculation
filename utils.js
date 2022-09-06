@@ -5,6 +5,9 @@ import {
     ANKR_RPC_URL
 } from './constants.js';
 
+// We use this to limit our calls if we are over the allowed rate for the free API.
+const delay = (ms = 2000) => new Promise(r => setTimeout(r, ms));
+
 export const convertWithDecimals = (numberString, decimals) => {
     if (decimals && numberString) {
         return Number(numberString.padStart(decimals + 1, '0').replace(RegExp(`(\\d+)(\\d{${decimals}})`), '$1.$2'));
